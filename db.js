@@ -1,8 +1,11 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-// const mongoURL = process.env.MONGO_DB_URL_LOCAL;
-const mongoURL = process.env.MONGO_DB_URL;
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
+
+const mongoURL = process.env.MONGO_DB_URL_LOCAL;
+// const mongoURL = process.env.MONGO_DB_URL;
 
 mongoose.connect(mongoURL);
 
